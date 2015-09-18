@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            {% stylesheets '@bootstrap_less' combine=true %}
+            <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
+            {% endstylesheets %}
+        {% endblock %}
+    
+
+        
+    </head>
+    <body class="container">
+    {% block body %}{% endblock %}
+   
+    <style type="text/css">
+        #ui-datepicker-div{
+            font-size: 12px;
+        }
+    </style>
+    <script type="text/javascript" src="{{asset('jquery.js')}}"> </script>
+    {% block javascripts %}
+        {% javascripts '@jquery_js' '@bootstrap_js' combine=true %}
+        <script src="{{ asset_url }}"></script>
+   
+        {% endjavascripts %}
+    {% endblock %}
+   
+    
+
+
+<div id="ladowanie"></div>
+<div id="postep"></div>
+<div id="odpowiedz"></div>
+    
+    
+</body>
+</html>

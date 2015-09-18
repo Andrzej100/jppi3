@@ -1,0 +1,38 @@
+{% extends "::base.html.twig" %}
+
+
+{% block body %}
+    
+    
+    <form id="formularz">
+        
+        <input name="imie" />
+        <input name="nazwisko" />
+        <input type="file" name="zdjecie" class="zdjecie"/>
+        <input type="submit" />
+        
+    </form>
+    
+    <form id="formularz2">
+        
+        <input name="imie" />
+        <input name="nazwisko" />
+        <input type="file" name="skany" class="zdjecie"/>
+        <input type="submit" />
+        
+    </form>
+    
+    
+    
+    
+{% endblock%}
+
+{% block javascripts %}
+    <script type="text/javascript">
+        
+        uploadFile($('#formularz2'));
+        
+        
+        
+    </script>
+{% endblock%}
